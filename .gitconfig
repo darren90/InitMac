@@ -1,0 +1,66 @@
+[core]
+	excludesfile = /Users/Fengtf/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Fengtf
+	email = 1005052145@qq.com
+[commit]
+	template = /Users/Fengtf/.stCommitMsg
+
+
+[push]
+	default = current
+
+[core]
+	editor = vim
+	excludesfile = /Users/jason/.gitignore_global
+
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	ui = true
+	pager = true
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[https]
+#	proxy = socks5://127.0.0.1:1080
+[http]
+#	proxy = socks5://127.0.0.1:1080
+[alias]
+	co = commit
+	st = status -b
+	ch = checkout
+	br = branch
+	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+	ll = log --pretty=oneline --graph --decorate --abbrev-commit --all
+	lr = log --pretty=oneline --graph --decorate --abbrev-commit --all
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ls = log --oneline --stat --date=short
+	ss = status -s -b
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
