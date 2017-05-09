@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>plis</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> if (_tgs == nil) {
+        // 初始化
+        // 1.获得plist的全路径
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"tgs.plist" ofType:nil];
+        
+        // 2.加载数组
+        NSArray *dictArray = [NSArray arrayWithContentsOfFile:path];
+        
+        // 3.将dictArray里面的所有字典转成模型对象,放到新的数组中
+        NSMutableArray *tgArray = [NSMutableArray array];
+        for (NSDictionary *dict in dictArray) {
+            // 3.1.创建模型对象
+            MJTg *tg = [MJTg tgWithDict:dict];
+            
+            // 3.2.添加模型对象到数组中
+            [tgArray addObject:tg];
+        }
+        
+        // 4.赋值
+        _tgs = tgArray;
+    }
+    return _tgs;
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AF0DCB3F-2D5C-4996-AD63-86A38319019D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>懒加载</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

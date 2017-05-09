@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>  if(_heros == nil){
+        NSString *path = [[NSBundle mainBundle]pathForResource:@"heros.plist" ofType:nil];
+        NSArray *dictArrray = [NSArray arrayWithContentsOfFile:path];
+        NSMutableArray *heroArray = [NSMutableArray array];
+        for (NSDictionary *dict in dictArrray) {
+            Hero *hero = [Hero heroWithDict:dict];
+            [heroArray addObject:hero];
+        }
+        _heros = heroArray;
+    }
+    return _heros;
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>22C274F0-2BE4-40C0-991A-A797B9D42651</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>plist</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>plist</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
