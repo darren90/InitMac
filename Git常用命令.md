@@ -39,6 +39,9 @@ The default snippets are stored in the
     
     # 新建一个分支，并切换到该分支
     $ git checkout -b [branch]
+    
+    # 删除[branch]分支
+    $ git branch -D [branch] 
 
 ## 4 ： 标签
 
@@ -136,4 +139,40 @@ The default snippets are stored in the
     # 暂时将未提交的变化移除，稍后再移入
     $ git stash
     $ git stash pop
+
+## 暂存
+
+	#保存当前的工作进度。会分别对暂存区和工作区的状态进行保存
+	git stash
+	
+	#显示进度列表。此命令显然暗示了git stash 可以多次保存工作进度，并用在恢复时候进行选择
+	git stash list
+	
+	#恢复最新保存的工作进
+	git stash pop [--index] [<stash>]
+
+ 	 # 删除所有存储的进度
+	 git stash clear
+	
+	
+## Git其他非常用，但需了解的操作
+
+    # 取别的分支的某一次的提交
+    git cherry-pick <commit id>
+
+    # Git 把代码置到某一次的提交
+     git checkout [<commit>]
+
+	 恢复文件，取消对文件的修改
+	 git checkout -- XXXX.m
+	 git checkout -- <file>..." to discard changes in working directory
+	
+	//从暂存区删除,取消文件暂存，文件回到工作区
+	use "git reset HEAD <file>..." to unstage
+	git reset HEAD <file>
+	
+	  修改最后一次提交
+	 git commit --amend
+
+
 

@@ -8,6 +8,8 @@ The default snippets are stored in the
 
 `~/Library/Developer/Xcode/UserData/CodeSnippets/`
 
+## Git的[常用操作](https://github.com/darren90/InitMac/blob/master/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md)
+
 # Git提交操作
 假如：项目名称XClient 项目主分支：master 当前自己的开发分支：ftf/dev
  
@@ -42,7 +44,24 @@ perl PUClient/script/sort-Xcode-project-file PUClient/PUClient.xcodeproj/project
 
 
 
+## Git其他非常用，但需了解的操作
 
+    # 取别的分支的某一次的提交
+    git cherry-pick <commit id>
+
+    # Git 把代码置到某一次的提交
+     git checkout [<commit>]
+
+	 恢复文件，取消对文件的修改
+	 git checkout -- XXXX.m
+	 git checkout -- <file>..." to discard changes in working directory
+	
+	//从暂存区删除,取消文件暂存，文件回到工作区
+	use "git reset HEAD <file>..." to unstage
+	git reset HEAD <file>
+	
+	  修改最后一次提交
+	 git commit --amend
 
 
 
